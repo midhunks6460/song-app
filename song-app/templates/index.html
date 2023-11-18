@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song App</title>
+</head>
+<body>
+    <h1>Song App</h1>
+    <ul>
+        {% for song in songs %}
+            <li>{{ song }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/add_song" method="post">
+        <label for="song">Add Song:</label>
+        <input type="text" id="song" name="song" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>
